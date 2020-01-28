@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Configuration>
+    <defaultFile></defaultFile>
+    <webRoot>.</webRoot>
+    <fileNotFound>404.html</fileNotFound>
+    <methodNotSupported>not_supported.html</methodNotSupported>
+    <port>8080</port>
+    <verbose>True</verbose>
+</Configuration>

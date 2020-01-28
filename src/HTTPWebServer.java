@@ -15,9 +15,9 @@ import java.util.StringTokenizer;
 // The tutorial can be found just here on the SSaurel's Blog :
 // https://www.ssaurel.com/blog/create-a-simple-http-web-server-in-java
 // Each Client Connection will be managed in a dedicated Thread
-public class Namaki_WebServer implements Runnable{
+public class HTTPWebServer implements Runnable{
 
-    static final File WEB_ROOT = new File(".");
+    /*static final File WEB_ROOT = new File(".");
     static final String DEFAULT_FILE = "index.html";
     static final String FILE_NOT_FOUND = "404.html";
     static final String METHOD_NOT_SUPPORTED = "not_supported.html";
@@ -25,12 +25,12 @@ public class Namaki_WebServer implements Runnable{
     static final int PORT = 8080;
 
     // verbose mode
-    static final boolean verbose = true;
+    static final boolean verbose = true;*/
 
     // Client Connection via Socket Class
     private Socket connect;
 
-    public Namaki_WebServer(Socket c) {
+    public HTTPWebServer(Socket c) {
         connect = c;
     }
 
@@ -41,7 +41,7 @@ public class Namaki_WebServer implements Runnable{
 
             // we listen until user halts server execution
             while (true) {
-                Namaki_WebServer myServer = new Namaki_WebServer(serverConnect.accept());
+                HTTPWebServer myServer = new HTTPWebServer(serverConnect.accept());
 
                 if (verbose) {
                     System.out.println("Connecton opened. (" + new Date() + ")");
